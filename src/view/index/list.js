@@ -15,28 +15,27 @@ export default class list extends Component {
     const res = await axios.get(`https://cnodejs.org/api/v1/topics?tab=${id}`)
     this.setState({
       data: res.data.data,
-      spin:false
+      spin: false
     })
   }
   componentDidMount() {
     this.getData(this.props.id)
   }
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if(this.props.id !== nextProps.id){
+    if (this.props.id !== nextProps.id) {
       this.getData(nextProps.id)
     }
   }
- 
+
   render() {
-    const {data, spin}  = this.state
+    const { data, spin } = this.state
     return (
-     
-        <Spin spinning={spin}>
+      <Spin spinning={spin}>
         <List itemLayout="horizontal"
           dataSource={data}
           pagination={{
-            total:data.length,
-            pageSize:10,
+            total: data.length,
+            pageSize: 10,
           }}
           renderItem={
             item => (
@@ -50,7 +49,7 @@ export default class list extends Component {
               </List.Item>
             )
           } />
-          </Spin>
+      </Spin>
     )
   }
 }

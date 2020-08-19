@@ -1,0 +1,36 @@
+.logo {
+    color: #fff;
+    text-align: center;
+}
+
+.warp {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: 0 50px;
+}
+
+.nav {
+    color: #fff;
+    background: none;
+    line-height: 62px !important;
+    border-bottom: none
+}
+
+.ant-menu-horizontal>.ant-menu-item a {
+    color: #fff;
+}
+
+.subNav a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
+img {
+    max-width: 100%;
+}
